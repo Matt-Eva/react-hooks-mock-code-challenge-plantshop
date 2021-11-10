@@ -1,13 +1,23 @@
 import React, {useState} from "react";
 
-function PlantCard({plant}) {
+function PlantCard({plant, updatePrice, deletePlant}) {
+  const {name, price, image, id} = plant
   const [status, setStatus] = useState(true)
+  const [formInfo, setFormInfo] = useState("")
 
   const changeStatus = () =>{
     setStatus(status => !status)
   }
 
-  const {name, price, image} = plant
+  const handleChange = (e) =>{
+    setFormInfo(e.target.value)
+  }
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    setFormInfo("")
+  }
+
   return (
     <li className="card">
       <img src={image} alt={name} />
@@ -18,6 +28,14 @@ function PlantCard({plant}) {
       ) : (
         <button onClick={changeStatus}>Out of Stock</button>
       )}
+      <form onSubmit={(e) =>{
+        handleSubmit(e)
+        updatePrice(formInfo, plant.id)
+      }}>
+        <input type="number" placeholder="Update price ..." value={formInfo} onChange={handleChange}/>
+        <button type="submit">Submit</button>
+      </form>
+      <button onClick={() => deletePlant(id)}>Mulch {name}</button>
     </li>
   );
 }
