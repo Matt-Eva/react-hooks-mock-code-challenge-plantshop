@@ -33,7 +33,6 @@ function PlantPage() {
     .then(r => r.json())
     .catch(error => console.error(error))
     .then(newPlant => setPlantData([...plantData, newPlant]))
-
   }
 
   const updatePrice = (price, id) =>{
@@ -62,7 +61,6 @@ function PlantPage() {
 
       setPlantData([...updatedPrices])
     })
-
   }
 
   const deletePlant = (id) =>{

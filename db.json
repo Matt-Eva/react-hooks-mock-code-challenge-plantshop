@@ -4,13 +4,13 @@
       "id": 2,
       "name": "ZZ Plant",
       "image": "./images/zz-plant.jpg",
-      "price": 25.98
+      "price": "80"
     },
     {
       "id": 3,
       "name": "Pilea peperomioides",
       "image": "./images/pilea.jpg",
-      "price": 5.99
+      "price": "7"
     },
     {
       "id": 4,
@@ -47,6 +47,12 @@
       "image": "fgdfg",
       "price": "45",
       "id": 10
+    },
+    {
+      "name": "humphrey",
+      "image": "gjhg",
+      "price": "70",
+      "id": 11
     }
   ]
 }
