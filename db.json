@@ -41,6 +41,18 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "name": "Juniper",
+      "image": "asdfas",
+      "price": "80.23",
+      "id": 8
+    },
+    {
+      "name": "Sasquatch",
+      "image": "asdf",
+      "price": "90.50",
+      "id": 9
     }
   ]
 }
